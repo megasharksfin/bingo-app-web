@@ -1,8 +1,8 @@
 {
   "dbconfig": {
-    "host": "localhost",
-    "user": "id14804127_clorox",
-    "password": ")cDWQb&9Pwt~nyoQ",
-    "database": "id14804127_bingo"
+    "host": "us-cdbr-east-02.cleardb.com",
+    "user": "b75db007ef6067",
+    "password": "6ad296fd",
+    "database": "heroku_74c8b7ce5a9f540"
   }
 }
