@@ -1,8 +1,0 @@
-{
-  "dbconfig": {
-    "host": "us-cdbr-east-02.cleardb.com",
-    "user": "b75db007ef6067",
-    "password": "6ad296fd",
-    "database": "heroku_74c8b7ce5a9f540"
-  }
-}

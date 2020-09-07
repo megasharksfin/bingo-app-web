@@ -1,14 +1,12 @@
 const mysql = require('mysql');
 const fs = require('fs');
+const dbConfig = require('./config/db.config');
 
-const { dbconfig } = JSON.parse(fs.readFileSync('./appconfig.json', 'utf-8'));
-
-const con = mysql.createConnection(dbconfig);
-
-con.connect((err) => {
-  if (err) {
-    throw(err);
-  }
+var con = mysql.createPool({
+  host: dbConfig.HOST,
+  user: dbConfig.USER,
+  password: dbConfig.PASSWORD,
+  database: dbConfig.DB
 });
 
 module.exports = con;
