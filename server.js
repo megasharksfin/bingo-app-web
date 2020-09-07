@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const sql = require('./sql-connection');
 
 const userRoutes = require('./routes/users');
 const gameRoutes = require('./routes/game');
@@ -40,10 +41,8 @@ app.use((err, req, res, next) => {
       message: 'Error. Bad request'
     }
   });
-}); 
+});
 
-const port = process.env.port || 5000;
+const PORT = process.env.PORT || 5000; 
 
-app.listen(port);
-
-module.exports = app;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
