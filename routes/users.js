@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
       throw(err);
     }
 
-    console.log(rows);
     res.status(201).json(rows);
   });
 });
