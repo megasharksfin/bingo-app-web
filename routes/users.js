@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     }
 
     const users = await rows.findAll();
-    res.status(201).json(users);
+    res.send(users);
   });
 });
 
