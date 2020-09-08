@@ -3,12 +3,13 @@ const router = express.Router();
 const sql = require('../sql-connection');
 
 router.get('/', async (req, res) => {
-  sql.query(`SELECT * FROM users`, (err, rows, fields) => {
+  sql.query(`SELECT * FROM users`, async (err, rows, fields) => {
     if (err) {
       throw(err);
     }
 
-    res.status(201).json(rows);
+    const users = await rows.findAll();
+    res.status(201).json(users);
   });
 });
 
