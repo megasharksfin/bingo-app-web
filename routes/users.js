@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
       throw(err);
     }
 
-    res.status(201).json(rows);
+    res.send(await rows);
   });
 });
 
