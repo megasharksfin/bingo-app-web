@@ -8,8 +8,8 @@ router.get('/', async (req, res) => {
       throw(err);
     }
 
-    const users = await rows.findAll();
-    res.send(users);
+    console.log(rows);
+    res.status(201).json(rows);
   });
 });
 
